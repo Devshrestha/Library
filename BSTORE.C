@@ -9,6 +9,7 @@
 #include<stdio.h>
 #include<string.h>
 
+
 struct book   //declaring a structure
 	{
 	 char name[30];
@@ -19,9 +20,12 @@ struct book   //declaring a structure
 	 int  stat;
 	}b;
 
+
+
 int main()
 {
-  int i,j,num,pre,val,choice;
+  int i,j,num,pre,n,val,choice;
+  char iid[6];
   char cat[6][20]={"Fiction","Philosphy","Literature","Science","Arts","Biography"};
   FILE *fptr,*item,*rtr;    //Pointer of type file
      fptr = fopen("D:\\library\\book.bin","ab"); //opening the file in binary append write mode
@@ -45,11 +49,25 @@ int main()
 
        printf("\nEnter the number of pages\n");
        scanf("%d",&b.page);
+		
+		//generating ID
+			iid[0]='#';
+			iid[1]=b.author[0];
+			iid[2]=b.author[1];
+			iid[3]=b.author[2];
+			iid[4]=b.name[0];
+			iid[5]=b.name[1];
+			iid[6]='2';
+			if(b.page<300)
+			iid[6]='1';
+			if(b.page>700)
+			iid[6]='3';
+			
+	   strcpy(b.idb,iid);	
+       printf("\nThe ID associated\n");
+       printf("%s",b.idb);
 
-       printf("\nEnter the ID associated\n");
-       scanf("%s",&b.idb[0]);
-
-       printf("\nEnter the catogary\n");
+       printf("\n\nEnter the catogary\n");
        for(j=0;j<6;j++)
        {
        		printf("%d for %s\n",j+1,cat[j]);
