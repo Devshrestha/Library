@@ -17,12 +17,12 @@ int main()
   int item,i,j,num;
   char wish;
   FILE *fptr,*rtr;    //Pointers of type file
-     
-     rtr=fopen("D:\\project\\prac\\num.txt","r");
+
+     rtr=fopen("D:\\library\\num.txt","r");
      fscanf(rtr,"%d",&num);
 	 fclose(rtr);
-	 
-	 fptr = fopen("D:\\project\\prac\\book.bin","ab+"); //opening the file in binary read and append mode
+
+	 fptr = fopen("D:\\library\\book.bin","ab+"); //opening the file in binary read and append mode
      if(fptr == 0 )
      {
 	 printf("ERROR! in opening the file");
@@ -30,7 +30,7 @@ int main()
      }
      for(j=1;j<=num;j++)
      {
-	 
+
      fread(&d,sizeof(struct book),1,fptr);
      printf("\nName of the book : %s",d.name);
      printf("\nName of the author : %s",d.author);
@@ -40,8 +40,8 @@ int main()
      printf("\n\n\n\n\n");
      }
     fclose(fptr);
-    
+
     getch();
-	
+
   return 0;
 }

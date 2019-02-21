@@ -16,7 +16,7 @@ struct book   //declaring a structure
 	 char author[30];
 	 char cate[20];
 	 char idb[30];
-	 int  stat; 
+	 int  stat;
 	}b;
 
 int main()
@@ -24,13 +24,13 @@ int main()
   int i,j,num,pre,val,choice;
   char cat[6][20]={"Fiction","Philosphy","Literature","Science","Arts","Biography"};
   FILE *fptr,*item,*rtr;    //Pointer of type file
-     fptr = fopen("D:\\project\\prac\\book.bin","ab"); //opening the file in binary append write mode
+     fptr = fopen("D:\\library\\book.bin","ab"); //opening the file in binary append write mode
      if(fptr == 0 )
      {
 	 printf("ERROR! in opening the file");
 	 exit(1);   //exiting the program in case the file is not opening
      }
-	 
+
 	 printf("Enter the number of desired entiries \n");
 	 scanf("%d",&num);
      printf("Enter the DATA\n");
@@ -56,25 +56,22 @@ int main()
 	   }
 	   scanf("%d",&choice);
 	   strcpy(b.cate,cat[choice-1]);
-       
+
        fwrite(&b,sizeof(struct book),1,fptr);
-	   
+
      }
 
 	fclose(fptr);
-	
-	rtr=fopen("D:\\project\\prac\\num.txt","r");
+
+	rtr=fopen("D:\\library\\num.txt","r");
 	fscanf(rtr,"%d",&pre);
 	fclose(rtr);
-	fopen("D:\\project\\prac\\num.txt","w");
+	fopen("D:\\library\\num.txt","w");
 	num=num+pre;
 	fprintf(rtr,"%d",num);
-	
+
 	fclose(rtr);
-	
-	
+
+
   return 0;
 }
-
-
-
