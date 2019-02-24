@@ -28,7 +28,7 @@ int main()
   char iid[6];
   char cat[6][20]={"Fiction","Philosphy","Literature","Science","Arts","Biography"};
   FILE *fptr,*item,*rtr;    //Pointer of type file
-     fptr = fopen("D:\\library\\book.bin","ab"); //opening the file in binary append write mode
+     fptr = fopen("D:\\Library\\book.bin","ab"); //opening the file in binary append write mode
      if(fptr == 0 )
      {
 	 printf("ERROR! in opening the file");
@@ -87,7 +87,6 @@ int main()
 	fopen("D:\\library\\num.txt","w");
 	num=num+pre;
 	fprintf(rtr,"%d",num);
-
 	fclose(rtr);
 
 
