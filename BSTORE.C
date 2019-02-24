@@ -76,6 +76,8 @@ int main()
 	   strcpy(b.cate,cat[choice-1]);
 
        fwrite(&b,sizeof(struct book),1,fptr);
+       
+       b.stat=0;
 
      }
 

@@ -15,7 +15,7 @@ struct stud
 	char ids[10];
 	int  rollno;
 	int  sta;
-	char bookid;
+	char bookid[10];
 	
 }child;
 

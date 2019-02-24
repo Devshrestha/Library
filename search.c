@@ -18,15 +18,7 @@ struct book   //declaring a structure for book
 	 char idb[30];
 	 int  stat;
 	}d;
-struct stud  //declaring a stucture for student
-	{
-	char first[15];
-	char last[15];
-	char ids[10];
-	int  rollno;
-	int  sta;
-	char bookid;	
-	}c;
+
 int main()
 	{
 		FILE *sptr,*rtr; //Pointer of type FILE
