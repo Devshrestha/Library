@@ -36,7 +36,17 @@ int main()
      printf("\nName of the author : %s",d.author);
      printf("\nContainig pages : %d",d.page);
      printf("\nID : %s",d.idb);
-     printf("\nCategory : %s",d.cat);
+     printf("\nCategory : %s\n",d.cat);
+     if(d.stat==0)
+     {
+     	printf("Issue status:\t");
+     	printf("Unissued");
+	 }
+	 if(d.stat==1)
+	 {
+	 	printf("Issue status:\t");
+	 	printf("Issued");
+	 }
      printf("\n\n\n\n\n");
      }
     fclose(fptr);
