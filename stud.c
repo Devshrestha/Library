@@ -1,5 +1,5 @@
 /***********************************************************************************
-*             Program for storing student data library                             *
+*             Program for student Registration                                     *
 *             using C and filestream                                               *
 *             Developed by Shreya,Sanket,Anurag and Devansh                        *
 ***********************************************************************************/
@@ -64,6 +64,7 @@ int main()
 		printf("\n\nIssue status:\t");
 		printf("No issues yet");		
 		fwrite(&child,sizeof(struct stud),1,cptr);	
+		fclose(cptr);
 	
 	getch();		
 		
