@@ -9,7 +9,6 @@ __Initial Contributors__
 * Shreya
 * Devansh
 
-To *contribute* in the repo fork the repo
 
 ## This will contain program
 * To add data of books
